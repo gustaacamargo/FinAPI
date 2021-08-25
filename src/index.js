@@ -25,7 +25,7 @@ app.post("/account", (request, response) => {
 })
 
 app.get('/statement', (request, response) => {
-    const { cpf } = request.hearders;
+    const cpf = request.hearders;
 
     const customer = customers.find(customer => customer.cpf === cpf);
     if(!customer) {
